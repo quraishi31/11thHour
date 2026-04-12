@@ -49,7 +49,7 @@ export default function WeArePico() {
   const rightServices = services.slice(3, 6)
 
   return (
-    <section className="bg-black py-24 text-white md:py-32" id="Why11">
+    <section className="relative py-24 text-white md:py-32" id="Why11" style={{backgroundColor: '#0a0a0a'}}>
       <div className="mx-auto max-w-[1200px] px-6 md:px-12">
         <h1 className="section-title mb-10 text-center text-[48px] font-semibold md:text-[68px] lg:text-[78px]">
           <span className="text-[#00d4c8]">We are 11th Hour.</span>
