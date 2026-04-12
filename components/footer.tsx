@@ -26,12 +26,12 @@ export function Footer() {
               <Logo className="h-14 w-auto md:h-16" />
             </div>
 
-            <p className="max-w-[16rem] text-xs font-semibold uppercase tracking-[0.32em] text-white/45">
-              Brand activation, events, gifting, and digital campaigns
+            <p className="max-w-[16rem] text-xs font-semibold uppercase tracking-[0.32em] text-white/50">
+              Brand activation, events, Giveawys
             </p>
 
-            <p className="lead-copy max-w-2xl text-base text-white/84 md:text-lg">
-              11Th Hour activates brands by using a strategic combination of experience design, brand engagement and digital enablement to create extraordinary experiences that emotionally connect with audiences.
+            <p className="lead-copy max-w-2xl text-sm text-white/84 md:text-lg">
+              11th Hour activates brands by using a strategic combination of experience design, brand engagement and digital enablement to create extraordinary experiences that emotionally connect with audiences.
             </p>
           </div>
 
