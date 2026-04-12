@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  background: #050505;
+}
+
+/* Optimize images and animations */
+img {
+  will-change: opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-shell {
+    @apply relative overflow-hidden;
+  }
+
+  .section-shell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%);
+    opacity: 1;
+  }
+
+  .section-frame {
+    @apply relative mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-12;
+  }
+
+  .premium-panel {
+    @apply rounded-[28px] border border-white/10 bg-[#0a0a0a];
+  }
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-white/55;
+  }
+
+  .hero-glow {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0));
+  }
+
+  .font-display {
+    font-family: var(--font-display), Arial, sans-serif;
+  }
+
+  .display-title {
+    font-family: var(--font-display), Arial, sans-serif;
+    letter-spacing: -0.055em;
+    line-height: 0.92;
+  }
+
+  .section-title {
+    font-family: var(--font-display), Arial, sans-serif;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+  }
+
+  .lead-copy {
+    letter-spacing: -0.005em;
+    line-height: 1.7;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 171 100% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 30%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 171 100% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 171 100% 38%;
+    --chart-1: 171 100% 38%;
+    --chart-2: 171 85% 45%;
+    --chart-3: 0 0% 60%;
+    --chart-4: 171 90% 48%;
+    --chart-5: 171 75% 42%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 180 100% 50%;
+    --sidebar-accent-foreground: 0 0% 2%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 180 100% 50%;
+  }
+  .dark {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 171 100% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 30%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 171 100% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 171 100% 38%;
+    --chart-1: 171 100% 38%;
+    --chart-2: 171 85% 45%;
+    --chart-3: 0 0% 60%;
+    --chart-4: 171 90% 48%;
+    --chart-5: 171 75% 42%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 171 100% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 171 100% 38%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 171 100% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  ::selection {
+    background: rgba(0, 212, 190, 0.3);
+    color: white;
+  }
+}
