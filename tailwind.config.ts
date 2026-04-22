@@ -132,6 +132,10 @@ const config: Config = {
             boxShadow: '0 0 30px rgba(34, 211, 238, 0.5)',
           },
         },
+        'marquee': {
+  '0%': { transform: 'translateX(0%)' },
+  '100%': { transform: 'translateX(-50%)' },
+},
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -141,6 +145,7 @@ const config: Config = {
         'slide-down': 'slide-down 0.5s ease-out',
         'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
         'glow': 'glow 3s ease-in-out infinite',
+        'marquee': 'marquee 25s linear infinite',
       },
     },
   },
