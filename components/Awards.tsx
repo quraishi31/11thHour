@@ -32,7 +32,7 @@ const clients: Client[] = [
 function ClientCard({ client }: { client: Client }) {
   return (
     <div className="group flex-shrink-0 w-40 rounded-[16px] border border-white/10 bg-[#0b0b0b] p-1.5 transition-colors duration-300 hover:border-[#00d4c8]/40 hover:bg-[#101010]">
-      <div className="relative flex aspect-[1.55] items-center justify-center overflow-hidden rounded-[12px] bg-white p-2 shadow-[0_10px_22px_rgba(0,0,0,0.14)]">
+      <div className="relative flex aspect-[1.55] items-center justify-center overflow-hidden rounded-[12px] bg-black p-2">
         <Image
           src={client.image}
           alt={client.name}
