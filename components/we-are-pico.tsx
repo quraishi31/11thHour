@@ -49,7 +49,7 @@ export default function WeArePico() {
   const rightServices = services.slice(3, 6)
 
   return (
-    <section className="relative py-24 text-white md:py-32" id="Why11" style={{backgroundColor: '#0a0a0a'}}>
+    <section className="relative py-24 text-white md:py-32" id="WhyEncore" style={{backgroundColor: '#0a0a0a'}}>
       <div style={{
   position: 'absolute',
   inset: 0,
