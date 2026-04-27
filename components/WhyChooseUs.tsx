@@ -59,7 +59,7 @@ export function WhyChooseUs() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="section-title text-balance text-5xl font-semibold text-white md:text-6xl">
-            Why Choose 11th Hour
+            Why Choose Encore
           </h2>
           <p className="lead-copy mt-4 text-lg text-white/65">
             Event management involves understanding the audience, shaping the concept, and coordinating the technical details before the experience goes live.
