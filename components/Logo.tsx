@@ -19,17 +19,6 @@ export function Logo({ className = 'h-14 w-auto' }: { className?: string }) {
         </linearGradient>
       </defs>
 
-      <rect x="18" y="22" rx="18" ry="18" width="76" height="76" fill={`url(#${gradientId})`} />
-      <rect x="40" y="38" width="7" height="43" fill="white" />
-      <rect x="58" y="38" width="7" height="43" fill="white" />
-      <path
-        d="M34 68 A28 28 0 0 1 78 68"
-        stroke="white"
-        strokeWidth="3.2"
-        fill="none"
-        strokeLinecap="round"
-      />
-
       <text
         x="122"
         y="64"
@@ -39,8 +28,7 @@ export function Logo({ className = 'h-14 w-auto' }: { className?: string }) {
         letterSpacing="6"
         fill="white"
       >
-        ENCORE
-        PAKISTAN
+        ENCORE        
       </text>
     </svg>
   )
