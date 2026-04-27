@@ -18,19 +18,19 @@ const contactItems = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@11thhour.pk',
-    href: 'mailto:hello@11thhour.pk',
+    value: 'INFO@ENCOREPK.COM',
+    href: 'mailto:info@encorepk.com',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+92 300 1234567',
-    href: 'tel:+923001234567',
+    value: '+92 331 4400883',
+    href: 'tel:+923314400883',
   },
   {
     icon: MapPin,
     label: 'Office',
-    value: 'Pakistan',
+    value: 'Main Shahra E Faisal Karachi, Pakistan',
     href: '#',
   },
 ]
@@ -56,7 +56,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         <div className="mt-4 space-y-4 sm:mt-7 sm:grid sm:gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:space-y-0">
           <div className="hidden rounded-[24px] border border-white/10 bg-white/[0.03] p-5 sm:block sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/45">
-              11th Hour
+              Encore Pakistan
             </p>
             <p className="mt-4 text-2xl font-semibold text-white">
               Let’s talk about your next event, activation, or campaign.
@@ -70,10 +70,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <p className="text-xs uppercase tracking-[0.26em] text-white/45">Availability</p>
                 <p className="mt-2 text-sm text-white">Monday to Saturday</p>
               </div>
-              <div className="bg-[#0a0a0a] px-4 py-4">
-                <p className="text-xs uppercase tracking-[0.26em] text-white/45">Best for</p>
-                <p className="mt-2 text-sm text-white">Brand activations, events, digital campaigns</p>
-              </div>
+             
             </div>
           </div>
 
