@@ -39,7 +39,8 @@ export function Logo({ className = 'h-14 w-auto' }: { className?: string }) {
         letterSpacing="6"
         fill="white"
       >
-        11TH HOUR
+        ENCORE
+        PAKISTAN
       </text>
     </svg>
   )
