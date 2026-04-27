@@ -10,11 +10,11 @@ export function Footer() {
   }
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/11thhourpk', label: 'LinkedIn' },
-    { icon: Facebook, href: 'https://www.facebook.com/11thhourpk', label: 'Facebook' },
-    { icon: Twitter, href: 'https://x.com/11thHourpk', label: 'X' },
-    { icon: Instagram, href: 'https://www.instagram.com/11thhourpk/', label: 'Instagram' },
-    { icon: Youtube, href: 'http://www.youtube.com/@11thHourpk', label: 'YouTube' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/encorepk', label: 'LinkedIn' },
+    { icon: Facebook, href: 'https://www.facebook.com/encorepk', label: 'Facebook' },
+    { icon: Twitter, href: 'https://x.com/encorepk', label: 'X' },
+    { icon: Instagram, href: 'https://www.instagram.com/encorepk', label: 'Instagram' },
+    { icon: Youtube, href: 'http://www.youtube.com/@encorepk', label: 'YouTube' },
   ]
 
   return (
@@ -31,13 +31,13 @@ export function Footer() {
             </p>
 
             <p className="lead-copy max-w-2xl text-sm text-white/84 md:text-lg">
-              11th Hour activates brands by using a strategic combination of experience design, brand engagement and digital enablement to create extraordinary experiences that emotionally connect with audiences.
+              Encore Pakistan activates brands by using a strategic combination of experience design, brand engagement and digital enablement to create extraordinary experiences that emotionally connect with audiences.
             </p>
           </div>
 
           <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-6 md:p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/45">
-              Follow 11th Hour
+              Follow Encore Pakistan
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               {socialLinks.map((social) => {
@@ -65,7 +65,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
           <p className="text-sm tracking-[0.08em] text-white/70">
-            © Copyright 2026 11th Hour. All Rights Reserved.
+            © Copyright 2026 Encore Pakistan. All Rights Reserved.
           </p>
 
           <button
