@@ -19,9 +19,9 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
-  title: '11th Hour - Brand Activation & Experience Agency',
+  title: 'Encore - Event management, Brand Activation BTL Agency',
   description:
-    '11th Hour delivers brand activations, events, corporate gifting, and digital campaigns with a polished, experience-led approach.',
+    'Encore Pakistan delivers brand activations, events, corporate gifting, and digital campaigns with a polished, experience-led approach.',
   keywords: [
     'brand activation',
     'communications strategy',
