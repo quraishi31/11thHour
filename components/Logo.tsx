@@ -111,19 +111,3 @@ const EncoreLogo: React.FC<EncoreLogoProps> = ({
     </svg>
   );
 };
-
-export default EncoreLogo;
-
-// ── Usage Example ──
-// import EncoreLogo from "./EncoreLogo";
-//
-// function App() {
-//   return (
-//     <div>
-//       <EncoreLogo width={400} />          {/* default size */}
-//       <EncoreLogo width={200} />          {/* smaller */}
-//       <EncoreLogo width={600} />          {/* larger  */}
-//       <EncoreLogo width={400} className="my-logo" />
-//     </div>
-//   );
-// }
