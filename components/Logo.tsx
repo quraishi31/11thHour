@@ -1,46 +1,129 @@
-import { useId } from 'react'
+import React from "react";
 
-export function Logo({ className = 'h-14 w-auto' }: { className?: string }) {
-  const gradientId = useId()
+interface EncoreLogoProps {
+  width?: number;
+  height?: number;
+  className?: string;
+}
+
+const EncoreLogo: React.FC<EncoreLogoProps> = ({
+  width = 400,
+  height = 120,
+  className = "",
+}) => {
+  const aspectRatio = 400 / 120;
+  const computedHeight = width / aspectRatio;
 
   return (
     <svg
-      viewBox="0 0 420 120"
-      fill="none"
+      width={width}
+      height={computedHeight}
+      viewBox="0 0 400 120"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      aria-label="11th Hour"
       role="img"
+      aria-label="Encore Logo"
     >
       <defs>
-        <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#00c2a5', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#00e0c0', stopOpacity: 1 }} />
+        {/* Globe gradient - light blue center to deeper blue */}
+        <radialGradient id="globeGradient" cx="45%" cy="38%" r="60%">
+          <stop offset="0%" stopColor="#7EDBF7" />
+          <stop offset="40%" stopColor="#29B8E8" />
+          <stop offset="100%" stopColor="#0A7DC2" />
+        </radialGradient>
+
+        {/* Arrow tip gradient */}
+        <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#4FD1F5" />
+          <stop offset="100%" stopColor="#1aaad4" />
         </linearGradient>
+
+        {/* Clip path for globe circle */}
+        <clipPath id="globeClip">
+          <circle cx="198" cy="58" r="46" />
+        </clipPath>
       </defs>
 
-      <rect x="18" y="22" rx="18" ry="18" width="76" height="76" fill={`url(#${gradientId})`} />
-      <rect x="40" y="38" width="7" height="43" fill="white" />
-      <rect x="58" y="38" width="7" height="43" fill="white" />
-      <path
-        d="M34 68 A28 28 0 0 1 78 68"
-        stroke="white"
-        strokeWidth="3.2"
+      {/* Background */}
+      <rect width="400" height="120" fill="#4a4a52" rx="4" />
+
+      {/* ── TEXT: EN ── */}
+      <text
+        x="14"
+        y="92"
+        fontFamily="'Arial Black', 'Arial Bold', sans-serif"
+        fontWeight="900"
+        fontSize="85"
+        fill="#D8D8DC"
+        letterSpacing="-2"
+      >
+        EN
+      </text>
+
+      {/* ── GLOBE (replaces the "C") ── */}
+      {/* Globe circle */}
+      <circle cx="198" cy="58" r="46" fill="url(#globeGradient)" />
+
+      {/* Orbital ring arc (dark band around the globe) */}
+      <ellipse
+        cx="198"
+        cy="58"
+        rx="52"
+        ry="20"
         fill="none"
-        strokeLinecap="round"
+        stroke="#2a2a30"
+        strokeWidth="7"
+        transform="rotate(-30, 198, 58)"
+        clipPath="url(#globeClip)"
       />
 
+      {/* Second arc stroke for depth */}
+      <ellipse
+        cx="198"
+        cy="58"
+        rx="52"
+        ry="20"
+        fill="none"
+        stroke="#1e3a4a"
+        strokeWidth="3"
+        transform="rotate(-30, 198, 58)"
+      />
+
+      {/* Arrow / cursor on top of globe */}
+      {/* Arrow body pointing up-right */}
+      <polygon
+        points="198,14  212,30  203,27  200,38  196,27  188,30"
+        fill="url(#arrowGradient)"
+      />
+
+      {/* ── TEXT: RE ── */}
       <text
-        x="122"
-        y="64"
-        fontFamily="Sora, Arial, sans-serif"
-        fontSize="38"
-        fontWeight="700"
-        letterSpacing="6"
-        fill="white"
+        x="242"
+        y="92"
+        fontFamily="'Arial Black', 'Arial Bold', sans-serif"
+        fontWeight="900"
+        fontSize="85"
+        fill="#D8D8DC"
+        letterSpacing="-2"
       >
-        11TH HOUR
+        RE
       </text>
     </svg>
-  )
-}
+  );
+};
+
+export default EncoreLogo;
+
+// ── Usage Example ──
+// import EncoreLogo from "./EncoreLogo";
+//
+// function App() {
+//   return (
+//     <div>
+//       <EncoreLogo width={400} />          {/* default size */}
+//       <EncoreLogo width={200} />          {/* smaller */}
+//       <EncoreLogo width={600} />          {/* larger  */}
+//       <EncoreLogo width={400} className="my-logo" />
+//     </div>
+//   );
+// }
