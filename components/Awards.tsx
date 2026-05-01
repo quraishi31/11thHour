@@ -2,14 +2,14 @@
 
 import Image, { StaticImageData } from 'next/image'
 
-import client1 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.09 AM.png'
-import client2 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.10 AM.jpeg'
-import client3 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.10 AM (1).jpeg'
-import client4 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.10 AM (2).jpeg'
-import client5 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.10 AM (3).jpeg'
-import client6 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.10 AM (4).jpeg'
-import client7 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.10 AM (5).jpeg'
-import client8 from '@/assets/WhatsApp Image 2026-03-23 at 5.50.10 AM (6).jpeg'
+import client1 from '@/assets/easypaisa.png'
+import client2 from '@/assets/pepsi.png'
+import client3 from '@/assets/stylo.png'
+import client4 from '@/assets/Lipton.png'
+import client5 from '@/assets/dominos.png'
+import client6 from '@/assets/soya supreme.png'
+import client7 from '@/assets/Kenwood.png'
+import client8 from '@/assets/zong.png'
 import client9 from '@/assets/Abbott.png'
 
 type Client = {
