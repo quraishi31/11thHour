@@ -1,113 +1,79 @@
-import React from "react";
+import React from 'react';
 
 interface EncoreLogoProps {
-  width?: number;
-  height?: number;
   className?: string;
+  width?: number | string;
+  height?: number | string;
 }
 
-const EncoreLogo: React.FC<EncoreLogoProps> = ({
-  width = 400,
-  height = 120,
-  className = "",
-}) => {
-  const aspectRatio = 400 / 120;
-  const computedHeight = width / aspectRatio;
-
+export default function EncoreLogo({ 
+  className = '', 
+  width = '100%', 
+  height = 'auto' 
+}: EncoreLogoProps) {
   return (
-    <svg
-      width={width}
-      height={computedHeight}
-      viewBox="0 0 400 120"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      role="img"
-      aria-label="Encore Logo"
-    >
-      <defs>
-        {/* Globe gradient - light blue center to deeper blue */}
-        <radialGradient id="globeGradient" cx="45%" cy="38%" r="60%">
-          <stop offset="0%" stopColor="#7EDBF7" />
-          <stop offset="40%" stopColor="#29B8E8" />
-          <stop offset="100%" stopColor="#0A7DC2" />
-        </radialGradient>
-
-        {/* Arrow tip gradient */}
-        <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#4FD1F5" />
-          <stop offset="100%" stopColor="#1aaad4" />
-        </linearGradient>
-
-        {/* Clip path for globe circle */}
-        <clipPath id="globeClip">
-          <circle cx="198" cy="58" r="46" />
-        </clipPath>
-      </defs>
-
-      {/* Background */}
-      <rect width="400" height="120" fill="#4a4a52" rx="4" />
-
-      {/* ── TEXT: EN ── */}
-      <text
-        x="14"
-        y="92"
-        fontFamily="'Arial Black', 'Arial Bold', sans-serif"
-        fontWeight="900"
-        fontSize="85"
-        fill="#D8D8DC"
-        letterSpacing="-2"
+    <div className={`flex justify-center items-center ${className}`}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 740 200"
+        width={width}
+        height={height}
+        className="w-full max-w-4xl"
       >
-        EN
-      </text>
+        <defs>
+          {/* Blue gradient for the 'O' symbol and arrow */}
+          <linearGradient id="encoreBlue" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#00C0F3" />
+            <stop offset="100%" stopColor="#0072CE" />
+          </linearGradient>
+        </defs>
 
-      {/* ── GLOBE (replaces the "C") ── */}
-      {/* Globe circle */}
-      <circle cx="198" cy="58" r="46" fill="url(#globeGradient)" />
+        {/* TEXT PATHS (E N C R E)
+          Using thick strokes with round caps/joins to perfectly mimic the geometric rounded font style.
+        */}
+        <g
+          stroke="#E2E4E5"
+          fill="none"
+          strokeWidth="24"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Letter E */}
+          <path d="M 100 50 L 50 50 L 50 150 L 100 150 M 50 100 L 90 100" />
+          
+          {/* Letter N */}
+          <path d="M 150 150 L 150 50 L 210 150 L 210 50" />
+          
+          {/* Letter C (An arc starting from top-right, going left, and ending at bottom-right) */}
+          <path d="M 330 65 A 40 40 0 1 0 330 135" />
+          
+          {/* Letter R */}
+          <path d="M 530 150 L 530 50 L 560 50 A 25 25 0 0 1 560 100 L 530 100 M 545 100 Q 575 100, 585 150" />
+          
+          {/* Letter E */}
+          <path d="M 680 50 L 630 50 L 630 150 L 680 150 M 630 100 L 670 100" />
+        </g>
 
-      {/* Orbital ring arc (dark band around the globe) */}
-      <ellipse
-        cx="198"
-        cy="58"
-        rx="52"
-        ry="20"
-        fill="none"
-        stroke="#2a2a30"
-        strokeWidth="7"
-        transform="rotate(-30, 198, 58)"
-        clipPath="url(#globeClip)"
-      />
-
-      {/* Second arc stroke for depth */}
-      <ellipse
-        cx="198"
-        cy="58"
-        rx="52"
-        ry="20"
-        fill="none"
-        stroke="#1e3a4a"
-        strokeWidth="3"
-        transform="rotate(-30, 198, 58)"
-      />
-
-      {/* Arrow / cursor on top of globe */}
-      {/* Arrow body pointing up-right */}
-      <polygon
-        points="198,14  212,30  203,27  200,38  196,27  188,30"
-        fill="url(#arrowGradient)"
-      />
-
-      {/* ── TEXT: RE ── */}
-      <text
-        x="242"
-        y="92"
-        fontFamily="'Arial Black', 'Arial Bold', sans-serif"
-        fontWeight="900"
-        fontSize="85"
-        fill="#D8D8DC"
-        letterSpacing="-2"
-      >
-        RE
-      </text>
-    </svg>
+        {/* SYMBOL 'O'
+          Includes the blue circle, the white sweeping trail, and the blue paper-plane arrow.
+        */}
+        <g>
+          {/* Base Blue Circle */}
+          <circle cx="430" cy="100" r="60" fill="url(#encoreBlue)" />
+          
+          {/* White Swoosh / Trail crossing the circle */}
+          <path 
+            d="M 368 115 C 400 145, 450 120, 482 45 C 435 65, 390 100, 368 115 Z" 
+            fill="#FFFFFF" 
+          />
+          
+          {/* Blue Paper-Plane / Arrowhead */}
+          <path 
+            d="M 505 10 L 515 45 L 490 38 L 475 25 Z" 
+            fill="url(#encoreBlue)" 
+          />
+        </g>
+      </svg>
+    </div>
   );
-};
+}
