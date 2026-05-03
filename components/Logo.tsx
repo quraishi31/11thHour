@@ -1,36 +1,36 @@
-import { useId } from 'react'
+import React from "react";
 
-export function Logo({ className = 'h-14 w-auto' }: { className?: string }) {
-  const gradientId = useId()
+type LogoProps = {
+  src?: string;
+  alt?: string;
+  width?: number | string;
+  height?: number | string;
+  className?: string;
+};
 
+const Logo: React.FC<LogoProps> = ({
+  src = "https://b8axupjguy.ufs.sh/f/mclzbYUnWM5pvZ0goYey4C3DewPB2TUtbRK7nuLo8FYj65ch", // <-- replace this
+  alt = "Company Logo",
+  width = 160,
+  height = "auto",
+  className = "",
+}) => {
   return (
-    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 432">
-    <defs>
-        <style>
-            .cls-1{fill:#e6e6e6;}.cls-2{fill:url(#linear-gradient);}.cls-3{fill:url(#linear-gradient-2);}.cls-4{fill:url(#linear-gradient-3);}
-        </style>
-        <linearGradient id="linear-gradient" x1="283.67" y1="258.64" x2="332.81" y2="220.71" gradientTransform="translate(-6.44 -16.08) rotate(-3.62)" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#2bc4f3" />
-            <stop offset="0.5" stop-color="#00aeee" />
-            <stop offset="1" stop-color="#0085c1" />
-        </linearGradient>
-        <linearGradient id="linear-gradient-2" x1="295.41" y1="283.87" x2="352.83" y2="239.55" gradientTransform="translate(-6.44 -16.08) rotate(-3.62)" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#2bc4f3" />
-            <stop offset="0.5" stop-color="#00aeee" />
-            <stop offset="1" stop-color="#0095da" />
-        </linearGradient>
-        <linearGradient id="linear-gradient-3" x1="347.37" y1="180.78" x2="367.05" y2="168.02" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#linear-gradient-2" />
-    </defs>
-    <path class="cls-1" d="M154.37,177.89v12.62h-26v14.94h26a21.21,21.21,0,0,1-.67,4.43,11.93,11.93,0,0,1-1.83,4,9.45,9.45,0,0,1-8.1,3.95H128.36v14.94h26v12.62H115.54V189.55c0-3.73,1-6.6,3.13-8.63a11,11,0,0,1,8-3Z" />
-    <path class="cls-1" d="M164,188.1a11.73,11.73,0,0,1,.63-3.85,9.87,9.87,0,0,1,1.89-3.28,8.69,8.69,0,0,1,3.16-2.26,11,11,0,0,1,4.42-.82h2.13l29,44.42V177.89h12.81v67.45H205.83l-29-44.23v44.23H164Z" />
-    <path class="cls-1" d="M282.33,200.92a14.84,14.84,0,0,0-4.24-6.07,21.42,21.42,0,0,0-6.6-3.9,29,29,0,0,0-7.85-1.74,27.37,27.37,0,0,0-7.8.43,20.85,20.85,0,0,0-7.09,2.94,21.1,21.1,0,0,0-5.3,5,22.75,22.75,0,0,0-3.32,6.51,23.94,23.94,0,0,0-1.16,7.42,23.11,23.11,0,0,0,3.09,12.28,21.63,21.63,0,0,0,7.8,7.76,22,22,0,0,0,10.31,2.89,23,23,0,0,0,10.6-2.12q4.34-1.92,9.73-7.51l8.29,9a64.81,64.81,0,0,1-6.36,5.78,33.3,33.3,0,0,1-6.41,3.95,31.84,31.84,0,0,1-7,2.31,39.93,39.93,0,0,1-8.05.77,35.44,35.44,0,0,1-13.78-2.5,31.49,31.49,0,0,1-16.91-16.34A40.06,40.06,0,0,1,227,216.43a38,38,0,0,1,.29-11.71,35,35,0,0,1,3.86-10.84,34.44,34.44,0,0,1,6.12-7.95,30.45,30.45,0,0,1,7.42-5.2,33.6,33.6,0,0,1,8.48-2.84,53.85,53.85,0,0,1,9.29-1,42.43,42.43,0,0,1,7.09.62,35.51,35.51,0,0,1,7,1.93,23.68,23.68,0,0,1,5.93,3.32,11.24,11.24,0,0,1,3.66,4.72,10.1,10.1,0,0,1,.29,6A18.82,18.82,0,0,1,282.33,200.92Z"
+    <img
+      src={src}
+      alt={alt}
+      width={typeof width === "number" ? width : undefined}
+      height={typeof height === "number" ? height : undefined}
+      style={{
+        width: typeof width === "string" ? width : undefined,
+        height: typeof height === "string" ? height : undefined,
+        objectFit: "contain",
+        display: "block",
+      }}
+      className={className}
+      loading="lazy"
     />
-    <path class="cls-1" d="M383.41,177.79h14.74a22.14,22.14,0,0,1,11.76,2.9,20.11,20.11,0,0,1,7.23,7.38A23.08,23.08,0,0,1,420,198a29.94,29.94,0,0,1-1.21,10.56,26.34,26.34,0,0,1-5,9.27,20.12,20.12,0,0,1-8.43,6.08l16.86,21.42h-15.7l-18.7-23.7a8.41,8.41,0,0,1-1.88-6,11.39,11.39,0,0,1,1.88-5.68,3.31,3.31,0,0,0,1.83,1.63,13.21,13.21,0,0,0,3,.87,19.87,19.87,0,0,0,3.32.29,17.17,17.17,0,0,0,2.8-.19,8.49,8.49,0,0,0,4.48-2.31A11.55,11.55,0,0,0,406.1,206a14.84,14.84,0,0,0,.92-5.21,11.57,11.57,0,0,0-1.11-5.06,9.15,9.15,0,0,0-3.47-3.8,11,11,0,0,0-6-1.49H385.53v54.92H372.72V189.66a14.21,14.21,0,0,1,2.4-8.59C376.73,178.89,379.49,177.79,383.41,177.79Z"
-    />
-    <path class="cls-1" d="M470.71,177.89v12.62h-26v14.94h26a21.21,21.21,0,0,1-.67,4.43,11.93,11.93,0,0,1-1.83,4,9.45,9.45,0,0,1-8.1,3.95H444.7v14.94h26v12.62H431.88V189.55c0-3.73,1-6.6,3.13-8.63a11,11,0,0,1,7.95-3Z" />
-    <path class="cls-2" d="M299.19,220.37c-.15-1-.26-2-.32-3a31.8,31.8,0,0,1,41.92-32.13C342,194.13,340,214.61,299.19,220.37Z" />
-    <path class="cls-3" d="M362.32,213.39a31.79,31.79,0,0,1-62.41,10.34c9.11.37,43-.7,46.21-36.07A31.77,31.77,0,0,1,362.32,213.39Z" />
-    <path class="cls-4" d="M347.45,180.88a1,1,0,0,1-.17-.77c.66-3.57,1.48-6.46,1.52-7,0-.11-.15-.17-.19-.07-.49,1.23-1.79,3.54-3,6.09a.81.81,0,0,1-.51.43l-8.23,2.29c-.05,0-.08,0-.05-.08l12.86-12a0,0,0,0,1,0,0L352,187.31s0,0,0,0Z" />
-</svg>
-    }
-)
+  );
+};
+
+export default Logo;
