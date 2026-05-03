@@ -9,7 +9,7 @@ type LogoProps = {
 };
 
 const Logo: React.FC<LogoProps> = ({
-  src = "https://b8axupjguy.ufs.sh/f/mclzbYUnWM5pvZ0goYey4C3DewPB2TUtbRK7nuLo8FYj65ch", // <-- replace this
+  src = "https://b8axupjguy.ufs.sh/f/mclzbYUnWM5pxaqvwDL2t4GN5U9I3TASyb7soBlnvORc0gpX", // <-- replace this
   alt = "Company Logo",
   width = 160,
   height = "auto",
