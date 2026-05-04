@@ -63,13 +63,13 @@ export default function WeArePico() {
 <div style={{
   position: 'absolute',
   inset: 0,
-  background: 'radial-gradient(ellipse at 50% 0%, rgba(0,212,200,0.07) 0%, transparent 70%)',
+  background: 'radial-gradient(ellipse at 50% 0%, hsl(var(--primary) / 0.07) 0%, transparent 70%)',
   pointerEvents: 'none',
   zIndex: 0,
 }} />
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 md:px-12">
         <h1 className="section-title mb-10 text-center text-[48px] font-semibold md:text-[68px] lg:text-[78px]">
-          <span className="text-[#00d4c8]">We are Encore Pakistan.</span>
+          <span className="text-primary">We are Encore Pakistan.</span>
         </h1>
 
         <p className="lead-copy mx-auto mb-20 text-center text-[22px] font-normal text-white md:mb-28 md:text-[30px]">
@@ -87,7 +87,7 @@ export default function WeArePico() {
                     className="group flex w-full items-center justify-between text-left"
                     onClick={() => setOpenLeftIndex(isOpen ? null : index)}
                   >
-                    <span className="font-display text-[24px] font-medium tracking-[0.01em] text-white transition-colors duration-300 group-hover:text-[#00d4c8]">{service.title}</span>
+                    <span className="font-display text-[24px] font-medium tracking-[0.01em] text-white transition-colors duration-300 group-hover:text-primary">{service.title}</span>
 
                     <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/70 text-white/65 transition-colors group-hover:border-white group-hover:text-white">
                       {isOpen ? <Minus size={14} /> : <Plus size={14} />}
@@ -112,7 +112,7 @@ export default function WeArePico() {
                     className="group flex w-full items-center justify-between text-left"
                     onClick={() => setOpenRightIndex(isOpen ? null : index)}
                   >
-                   <span className="font-display text-[24px] font-medium tracking-[0.01em] text-white transition-colors duration-300 group-hover:text-[#00d4c8]">{service.title}</span>
+                   <span className="font-display text-[24px] font-medium tracking-[0.01em] text-white transition-colors duration-300 group-hover:text-primary">{service.title}</span>
 
                     <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/70 text-white/65 transition-colors group-hover:border-white group-hover:text-white">
                       {isOpen ? <Minus size={14} /> : <Plus size={14} />}

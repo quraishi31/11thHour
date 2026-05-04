@@ -79,18 +79,18 @@ export default function WorksSlider() {
             <h2 className="section-title relative z-10 px-4 text-5xl font-semibold text-white md:text-6xl">
               Works
             </h2>
-            <span className="absolute -top-2 left-0 h-6 w-6 rounded-tl-lg border-l-4 border-t-4 border-teal-400" />
+            <span className="absolute -top-2 left-0 h-6 w-6 rounded-tl-lg border-l-4 border-t-4 border-primary" />
             <span className="absolute -bottom-2 right-0 h-6 w-6 rounded-br-lg border-b-4 border-r-4 border-white" />
           </div>
 
           <div className="flex gap-4">
             <CarouselPrevious
               variant="default"
-              className="static h-10 w-10 translate-y-0 rounded-md border-none bg-teal-400 text-white hover:bg-teal-500"
+              className="static h-10 w-10 translate-y-0 rounded-md border-none bg-primary text-primary-foreground hover:bg-primary/90"
             />
             <CarouselNext
               variant="default"
-              className="static h-10 w-10 translate-y-0 rounded-md border-none bg-teal-400 text-white hover:bg-teal-500"
+              className="static h-10 w-10 translate-y-0 rounded-md border-none bg-primary text-primary-foreground hover:bg-primary/90"
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function WorksSlider() {
                     {item.title}
                   </h3>
 
-                  <Button className="h-12 rounded-lg border-none bg-[#00D2BE] px-8 text-base font-semibold text-white transition-colors hover:bg-[#00b8a6]">
+                  <Button className="h-12 rounded-lg border-none bg-primary px-8 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90">
                     View Case Study <ChevronRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>

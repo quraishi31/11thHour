@@ -1,0 +1,13 @@
+[00:00:02.967] Server  LOG     ✓ Ready in 1625ms
+[00:00:04.980] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:07.752] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:12.763] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:57.311] Server  LOG     ✓ Compiled in 1304ms
+[00:03:13.312] Server  LOG     ✓ Compiled in 342ms
+[00:04:21.012] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:21.305] Browser WARN    Image with src "http://localhost:3000/_next/static/media/encore.1e2618eb.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:08:11.120] Server  LOG     ✓ Compiled in 1426ms
+[00:10:25.079] Server  LOG     ✓ Compiled in 230ms
+[00:10:45.192] Server  LOG     ✓ Compiled in 111ms
+[00:11:06.155] Server  LOG     ✓ Compiled in 400ms
+[00:11:44.654] Server  LOG     ✓ Compiled in 109ms

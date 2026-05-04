@@ -43,7 +43,7 @@ const SustainabilityHero: React.FC = () => {
                             <h2 className="mb-8 text-center text-2xl font-medium leading-snug">
                                 Download our ESG report now to see how we're making a difference.
                             </h2>
-                            <button className="w-full rounded-lg bg-[#00C1B4] py-4 text-lg font-bold text-black transition-transform hover:scale-[1.02] active:scale-95">
+                            <button className="w-full rounded-lg bg-primary py-4 text-lg font-bold text-primary-foreground transition-transform hover:scale-[1.02] active:scale-95">
                                 Download Now
                             </button>
                         </div>

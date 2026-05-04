@@ -1,36 +1,31 @@
-import React from "react";
+'use client'
+import Image, { type StaticImageData } from 'next/image'
+import encoreLogo from '../encore.png'
 
 type LogoProps = {
-  src?: string;
-  alt?: string;
-  width?: number | string;
-  height?: number | string;
-  className?: string;
-};
+  src?: string | StaticImageData
+  alt?: string
+  width?: number
+  height?: number
+  className?: string
+}
 
-const Logo: React.FC<LogoProps> = ({
-  src = "https://b8axupjguy.ufs.sh/f/mclzbYUnWM5pxaqvwDL2t4GN5U9I3TASyb7soBlnvORc0gpX", // <-- replace this
-  alt = "Company Logo",
+export function Logo({
+  src = encoreLogo,
+  alt = 'Encore',
   width = 160,
-  height = "auto",
-  className = "",
-}) => {
+  height = 40,
+  className = '',
+}: LogoProps) {
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
-      width={typeof width === "number" ? width : undefined}
-      height={typeof height === "number" ? height : undefined}
-      style={{
-        width: typeof width === "string" ? width : undefined,
-        height: typeof height === "string" ? height : undefined,
-        objectFit: "contain",
-        display: "block",
-      }}
+      width={width}
+      height={height}
       className={className}
-      loading="lazy"
+      priority
     />
-  );
-};
+  )
+}
 
-export default Logo;
