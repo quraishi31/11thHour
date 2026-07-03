@@ -531,7 +531,7 @@ function Navigation() {
         },
         {
             label: 'Portfolio',
-            href: '#works'
+            href: '/Pf'
         },
         {
             label: 'Contact Us',
@@ -549,12 +549,12 @@ function Navigation() {
                         className: "flex items-center justify-between",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-1 items-center justify-start",
+                                className: "flex flex-1 justify-start",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    href: "#Home",
-                                    className: "flex shrink-0 items-center transition-transform duration-300 hover:scale-105",
+                                    href: "#",
+                                    className: "flex-shrink-0 transition-transform duration-300 hover:scale-105",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Logo$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Logo"], {
-                                        className: "h-9 w-auto md:h-10"
+                                        className: "h-11 w-auto md:h-12"
                                     }, void 0, false, {
                                         fileName: "[project]/components/navigation.tsx",
                                         lineNumber: 54,
@@ -574,7 +574,7 @@ function Navigation() {
                                 className: "hidden items-center justify-center gap-6 lg:gap-12 md:flex",
                                 children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: item.href,
-                                        className: "whitespace-nowrap text-sm font-semibold uppercase tracking-[0.22em] text-white/88 transition-colors duration-300 hover:text-primary",
+                                        className: "whitespace-nowrap text-sm font-semibold uppercase tracking-[0.22em] text-white/88 transition-colors duration-300 hover:text-[#7be9dd]",
                                         children: item.label
                                     }, item.label, false, {
                                         fileName: "[project]/components/navigation.tsx",

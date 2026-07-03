@@ -84,7 +84,7 @@ const metadata = {
     ]
 };
 const viewport = {
-    themeColor: '#001a00',
+    themeColor: '#00A3E4',
     width: 'device-width',
     initialScale: 1,
     userScalable: true

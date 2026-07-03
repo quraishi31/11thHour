@@ -32,7 +32,7 @@ export function Navigation() {
   const navItems = [
     { label: 'Home', href: '#Home' },
     { label: 'Why Encore', href: '#WhyEncore' },
-    { label: 'Portfolio', href: '#works' },
+    { label: 'Portfolio', href: '/Pf' },   
     { label: 'Contact Us', href: '#footer' },
   ]
 
@@ -49,9 +49,9 @@ export function Navigation() {
           }`}
         >
           <div className="flex items-center justify-between">
-            <div className="flex flex-1 items-center justify-start">
-              <Link href="#Home" className="flex shrink-0 items-center transition-transform duration-300 hover:scale-105">
-                <Logo className="h-9 w-auto md:h-10" />
+            <div className="flex flex-1 justify-start">
+              <Link href="#" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
+                <Logo className="h-11 w-auto md:h-12" />
               </Link>
             </div>
 
@@ -60,7 +60,7 @@ export function Navigation() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="whitespace-nowrap text-sm font-semibold uppercase tracking-[0.22em] text-white/88 transition-colors duration-300 hover:text-primary"
+                  className="whitespace-nowrap text-sm font-semibold uppercase tracking-[0.22em] text-white/88 transition-colors duration-300 hover:text-[#7be9dd]"
                 >
                   {item.label}
                 </Link>
